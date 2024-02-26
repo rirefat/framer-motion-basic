@@ -1,0 +1,26 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+li{
+    padding: 0.5rem 2rem ;
+    margin-bottom: 0.5rem;
+}
+
+li:hover{
+    background-color: #F8FAFC;
+}
+li:hover a{
+    font-weight: 700;
+}
+
+.active{
+    font-weight: 700;
+    color: rgba(255, 0, 0, 0.493);
+}
