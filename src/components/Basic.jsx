@@ -9,6 +9,14 @@ const Basic = () => {
                 initial={{ opacity: 0, scale: 0.2 }}
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 2 }}
+
+                exit = {{
+                    x: '-100vw',
+                    transition: {
+                        ease: 'easeInOut',
+                        duration: 1,
+                    },
+                  }}
             >
             </motion.div>
         </div>

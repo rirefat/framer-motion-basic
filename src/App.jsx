@@ -1,4 +1,4 @@
-import { motion } from 'framer-motion';
+import { AnimatePresence, motion } from 'framer-motion';
 import { NavLink, Outlet } from "react-router-dom";
 
 const App = () => {
@@ -11,11 +11,13 @@ const App = () => {
     { title: "Keyframe Animation", path: "keyframe" },
     { title: "Text Motion", path: "text-motion" },
     { title: "Transition Type", path: "transition-type" },
-    { title: "Scroll Reveal", path: "scroll-reveal" }
-  ]
+    { title: "Scroll Reveal", path: "scroll-reveal" },
+    { title: "Stagger Animation Function", path: "stagger-animation" },
+  ];
+
   return (
-    <div className="flex ">
-      <div className="navlinks w-1/4 shadow-xl h-[100vh]">
+    <div className="flex relative">
+      <div className="w-1/4 shadow-xl h-[100vh] fixed">
         <ul className="my-8">
           {
             navList.map((item, index) => (
@@ -34,8 +36,11 @@ const App = () => {
         </ul>
       </div>
 
-      <div className="flex items-center justify-center w-full h-auto bg-slate-50">
+      <div className="flex items-center justify-center w-3/4 min-h-[100vh] bg-slate-50 absolute left-[25%]">
+        
+        <AnimatePresence mode='wait'>
         <Outlet />
+        </AnimatePresence>
       </div>
     </div>
   );

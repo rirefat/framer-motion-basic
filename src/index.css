@@ -16,11 +16,10 @@ li{
 li:hover{
     background-color: #F8FAFC;
 }
-li:hover a{
-    font-weight: 700;
-}
 
+
+li:hover a,
 .active{
     font-weight: 700;
-    color: rgba(255, 0, 0, 0.493);
+    color: purple;
 }

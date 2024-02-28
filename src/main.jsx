@@ -12,26 +12,28 @@ import TextMotion from './components/TextMotion.jsx'
 import TransitionType from './components/TransitionType.jsx'
 import ScrollReveal from './components/ScrollReveal.jsx'
 import Home from './components/Home.jsx'
+import StaggerAnimation from './components/StaggerAnimation.jsx'
 
 const router = createBrowserRouter([
   {
     path: '/',
-    element: <App/>,
-    children:[
-      {index: true, element:<Home/>},
-      {path:"basic", element: <Basic/>},
-      {path:"count-animate", element: <CountAnimate/>},
-      {path:"variants", element: <Variants/>},
-      {path:"button-tap", element: <ButtonTap/>},
-      {path:"keyframe", element: <Keyframe/>},
-      {path:"text-motion", element: <TextMotion/>},
-      {path:"transition-type", element: <TransitionType/>},
-      {path:"scroll-reveal", element: <ScrollReveal/>},
+    element: <App />,
+    children: [
+      { index: true, element: <Home /> },
+      { path: "basic", element: <Basic /> },
+      { path: "count-animate", element: <CountAnimate /> },
+      { path: "variants", element: <Variants /> },
+      { path: "button-tap", element: <ButtonTap /> },
+      { path: "keyframe", element: <Keyframe /> },
+      { path: "text-motion", element: <TextMotion /> },
+      { path: "transition-type", element: <TransitionType /> },
+      { path: "scroll-reveal", element: <ScrollReveal /> },
+      { path: "stagger-animation", element: <StaggerAnimation /> },
     ]
   }
 ])
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <RouterProvider router={router}/>
+    <RouterProvider router={router} />
   </React.StrictMode>,
 )
